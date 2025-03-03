@@ -2,15 +2,13 @@ import discord
 import asyncio
 import random
 
-# Your bot token (keep this secret!)
-TOKEN = "YOUR_BOT_TOKEN"
+# Ask for Bot Token and Channel ID
+TOKEN = input("Enter your Discord Bot Token: ").strip()
+CHANNEL_ID = int(input("Enter the Channel ID: ").strip())
 
-# Set up the bot
+# Set up Discord bot with necessary intents
 intents = discord.Intents.default()
 client = discord.Client(intents=intents)
-
-# Define the target channel ID where the bot will send messages
-CHANNEL_ID = 123456789012345678  # Replace with your channel ID
 
 @client.event
 async def on_ready():
